@@ -9,13 +9,17 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    var loadingHud: MBProgressHUD?
+    
+    var indicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        indicator.center = view.center
+        self.view.addSubview(indicator)
+        self.view.bringSubviewToFront(indicator)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     func showAlert(title: String?, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -27,25 +31,9 @@ class BaseViewController: UIViewController {
 // MARK: - Adding MBProgress HUD
 extension BaseViewController {
     func showHUD(title: String?, detailText: String = "") {
-        resetLoadingView()
-        loadingHud = MBProgressHUD.showAdded(to: view, animated: true)
-        loadingHud?.mode = MBProgressHUDMode.indeterminate
-        loadingHud?.detailsLabel.text = detailText
-        loadingHud?.label.text = title
-    }
-    
-    func showHUDProgress(value: String) {
-        loadingHud?.detailsLabel.text = value
-    }
-    private func resetLoadingView() {
-        if loadingHud == nil {
-            loadingHud = MBProgressHUD()
-        }
-        loadingHud?.removeFromSuperview()
-        loadingHud?.hide(animated: true)
-    }
+        indicator.startAnimating()
+    }   
     func hideHud() {
-        self.resetLoadingView()
-        loadingHud?.hide(animated: true)
+        indicator.stopAnimating()
     }
 }

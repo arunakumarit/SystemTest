@@ -12,7 +12,5 @@ struct CityModel {
     let humidity: String?
     let rainChances: String?
     let speed: String?
-    let deg: String?
-    let gust: String?
-    
+    let deg: String?    
 }

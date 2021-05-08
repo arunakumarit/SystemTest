@@ -15,10 +15,22 @@ class CityVM {
     init() {
     }
     
-    func fetchCityDetails(locationLatitude: String,locationLongitude: String, onSuccess: @escaping (CityModel) -> Void,
+    func fetchCityDetails(urlStr: String, onSuccess: @escaping (CityModel) -> Void,
                            onError: @escaping APIErrorHandler) {
         
-        NetworkManagerVC.fetchCityDetailsByLocation(locLatitude: locationLatitude,locLongitude:locationLongitude, onSuccess: { (dataSource) in
+        NetworkManagerVC.fetchCityDetailsByLocation(url: urlStr, onSuccess: { (dataSource) in
+            onSuccess(dataSource)
+        }) { (error) in
+            
+            onError(error)
+            print("CityDetails failed.): \(String(describing: error))")
+            
+        }
+    }
+    func fetchCityDetailsFor5DaysForecast(urlStr: String, onSuccess: @escaping (CityModel) -> Void,
+                          onError: @escaping APIErrorHandler) {
+        
+        NetworkManagerVC.fetchCityDetailsByLocationFor5DaysForecast(url: urlStr, onSuccess: { (dataSource) in
             onSuccess(dataSource)
         }) { (error) in
             

@@ -17,7 +17,7 @@ class SettingsVC: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
         self.setTableview()
-        settingsArr = ["Help", "5-Day's ForeCast","Home"]
+        settingsArr = ["Help", "5-Day's ForeCast","Home","Metric/Imperial Convertion"]
     }
     
 }
@@ -86,8 +86,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
                 appDelegate!.window?.rootViewController = mainRevealController
                 break
             case 1:
+                appDelegate?.fromScreen = "Settings"
+                
                 let storyBoard = UIStoryboard(name: StoryBoardName.kMainSB.rawValue, bundle: nil)
-                frontViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.CityVCID.rawValue)as? CityVC
+                frontViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.HomeVCID.rawValue)as? ViewController
                 rearViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.SettingsVCID.rawValue)as? SettingsVC
                 frontNavigationController =  UINavigationController(rootViewController: frontViewController)
                 rearNavigationController = UINavigationController(rootViewController: rearViewController)
@@ -100,6 +102,18 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             case 2:
                 let storyBoard = UIStoryboard(name: StoryBoardName.kMainSB.rawValue, bundle: nil)
                 frontViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.HomeVCID.rawValue)as? ViewController
+                rearViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.SettingsVCID.rawValue)as? SettingsVC
+                frontNavigationController =  UINavigationController(rootViewController: frontViewController)
+                rearNavigationController = UINavigationController(rootViewController: rearViewController)
+                revealController.frontViewController = frontNavigationController
+                revealController.rearViewController = rearNavigationController
+                revealController.rearViewRevealWidth = frontViewController.view.frame.width-70
+                mainRevealController  = revealController
+                appDelegate!.window?.rootViewController = mainRevealController
+                break
+            case 3:
+                let storyBoard = UIStoryboard(name: StoryBoardName.kMainSB.rawValue, bundle: nil)
+                frontViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.MetricImperialVCID.rawValue)as? MetricImperialVC
                 rearViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.SettingsVCID.rawValue)as? SettingsVC
                 frontNavigationController =  UINavigationController(rootViewController: frontViewController)
                 rearNavigationController = UINavigationController(rootViewController: rearViewController)

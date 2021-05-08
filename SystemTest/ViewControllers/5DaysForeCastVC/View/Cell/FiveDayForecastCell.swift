@@ -8,8 +8,15 @@
 
 import UIKit
 
-class _DayForecastCell: UITableViewCell {
+class FiveDayForecastCell: UITableViewCell {
 
+    @IBOutlet weak var tempLbl: UILabel!
+    @IBOutlet weak var humidityLbl: UILabel!
+    @IBOutlet weak var rainLbl: UILabel!
+    @IBOutlet weak var speedLbl: UILabel!
+    @IBOutlet weak var degLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

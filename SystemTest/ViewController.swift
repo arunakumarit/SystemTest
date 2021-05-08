@@ -11,13 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var locationsTable: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
     var locationsArr = [LocationModel]()
     var selectedLoc = LocationModel()
+    var filteredData = [LocationModel]()
+    var totalLocArr = [LocationModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Home"
+        searchBar.returnKeyType = .search
         if self.revealViewController() != nil {
             let revealButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
             navigationItem.leftBarButtonItem = revealButtonItem
@@ -54,6 +60,8 @@ class ViewController: UIViewController {
         locationMdl.locationLatitude = "10.8505"
         locationMdl.locationLonguitude = "76.2711"
         locationsArr.append(locationMdl)
+        
+        totalLocArr = locationsArr
     }
 
     @IBAction func mapButtonAction(_ sender: UIButton) {
@@ -66,7 +74,12 @@ class ViewController: UIViewController {
             destinationVC?.selectedLocationModel = selectedLoc
         }
     }
-    
+    func searchBasedOnInputStr(inputStr: String) {
+        filteredData = locationsArr.filter { $0.locationName?.localizedCaseInsensitiveContains(inputStr) ?? true }
+        self.locationsArr.removeAll()
+        self.locationsArr = filteredData
+        locationsTable.reloadData()
+    }
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -115,7 +128,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedLoc = locationsArr[indexPath.row]
-        self.performSegue(withIdentifier: SegueID.citySegue.rawValue, sender: nil)
+        if appDelegate?.fromScreen == "Settings" {
+            appDelegate?.fromScreen = "Settings"
+            let storyBoard : UIStoryboard = UIStoryboard(name:StoryBoardName.kMainSB.rawValue, bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: StoryBoardID.FiveDaysForeCastVCID.rawValue) as! FiveDaysForecastVC
+            nextViewController.selectedLocationModel = selectedLoc
+
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        }else {
+            appDelegate?.fromScreen = "city"
+            self.performSegue(withIdentifier: SegueID.citySegue.rawValue, sender: nil)
+        }
         
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -136,3 +159,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return [delete]
     }
 }
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let char = searchText.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if (isBackSpace == -92) {
+                print("Backspace was pressed")
+                self.locationsArr.removeAll()
+                self.locationsArr = totalLocArr
+                self.locationsTable.reloadData()
+            }else {
+                self.searchBasedOnInputStr(inputStr: searchText)
+            }
+        }
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+

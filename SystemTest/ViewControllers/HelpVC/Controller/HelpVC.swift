@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import WebKit
 
 class HelpVC: BaseViewController {
 
-    @IBOutlet weak var helpWebView: UIWebView!
+    @IBOutlet weak var helpWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,28 +23,26 @@ class HelpVC: BaseViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
         }
+        helpWebView.navigationDelegate = self
         self.navigationItem.title = "Help"
         if let url = URL(string: "https://openweathermap.org/api") {
             let request = URLRequest(url: url as URL)
-            helpWebView.loadRequest(request)
+            helpWebView.load(request)
         }
         
     }
 
 }
-extension HelpVC: UIWebViewDelegate {
-    func webViewDidStartLoad(_ webView: UIWebView) {
+extension HelpVC: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         self.showHUD(title: "Loading...")
     }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error)
-    {
-        print ("error has occured.")
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+       self.hideHud()
+    }
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("error:\(error.localizedDescription)")
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView)
-    {
-        self.hideHud()
-
-    }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611E4A562646A48E00C5C189 /* FiveDaysForecastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611E4A552646A48E00C5C189 /* FiveDaysForecastVC.swift */; };
+		611E4A592646A4B100C5C189 /* FiveDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611E4A582646A4B100C5C189 /* FiveDayForecastCell.swift */; };
+		61500F3026466FE300A9AF2A /* MetricImperialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61500F2F26466FE300A9AF2A /* MetricImperialVC.swift */; };
 		6151B2A12645079400FCC98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2A02645079400FCC98D /* AppDelegate.swift */; };
 		6151B2A32645079400FCC98D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2A22645079400FCC98D /* ViewController.swift */; };
 		6151B2A62645079400FCC98D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6151B2A42645079400FCC98D /* Main.storyboard */; };
@@ -19,31 +22,11 @@
 		6151B2D82645115A00FCC98D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2D72645115A00FCC98D /* LocationCell.swift */; };
 		6151B2DB2645216300FCC98D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2DA2645216300FCC98D /* LocationModel.swift */; };
 		6151B2E0264525AC00FCC98D /* CityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2DF264525AC00FCC98D /* CityVC.swift */; };
-		6151B2F72645269400FCC98D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6151B2E12645269300FCC98D /* Alamofire.framework */; };
-		6151B2F82645269400FCC98D /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E32645269300FCC98D /* TaskDelegate.swift */; };
-		6151B2F92645269400FCC98D /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E42645269300FCC98D /* MultipartFormData.swift */; };
-		6151B2FA2645269400FCC98D /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E52645269300FCC98D /* NetworkReachabilityManager.swift */; };
-		6151B2FB2645269400FCC98D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E62645269300FCC98D /* Timeline.swift */; };
-		6151B2FC2645269400FCC98D /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E72645269300FCC98D /* DispatchQueue+Alamofire.swift */; };
-		6151B2FD2645269400FCC98D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E82645269300FCC98D /* Result.swift */; };
-		6151B2FE2645269400FCC98D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2E92645269300FCC98D /* ParameterEncoding.swift */; };
-		6151B2FF2645269400FCC98D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2EA2645269300FCC98D /* AFError.swift */; };
-		6151B3002645269400FCC98D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2EB2645269300FCC98D /* Validation.swift */; };
-		6151B3012645269400FCC98D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2EC2645269300FCC98D /* Response.swift */; };
-		6151B3022645269400FCC98D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2ED2645269300FCC98D /* Alamofire.swift */; };
-		6151B3032645269400FCC98D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2EE2645269300FCC98D /* Request.swift */; };
-		6151B3042645269400FCC98D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2EF2645269300FCC98D /* SessionManager.swift */; };
-		6151B3052645269400FCC98D /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2F02645269300FCC98D /* ResponseSerialization.swift */; };
-		6151B3062645269400FCC98D /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2F12645269300FCC98D /* ServerTrustPolicy.swift */; };
-		6151B3072645269400FCC98D /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2F22645269300FCC98D /* SessionDelegate.swift */; };
-		6151B3082645269400FCC98D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6151B2F52645269400FCC98D /* MBProgressHUD.m */; };
 		6151B30B2645271300FCC98D /* NetworkManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B30A2645271300FCC98D /* NetworkManagerVC.swift */; };
 		6151B30D2645273600FCC98D /* CHRestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B30C2645273500FCC98D /* CHRestError.swift */; };
 		6151B3112645277F00FCC98D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B3102645277F00FCC98D /* CityModel.swift */; };
 		6151B3132645278D00FCC98D /* CityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B3122645278D00FCC98D /* CityVM.swift */; };
 		6151B31526452AC600FCC98D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B31426452AC500FCC98D /* BaseViewController.swift */; };
-		6151B31626452C1A00FCC98D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6151B2E12645269300FCC98D /* Alamofire.framework */; };
-		6151B31726452C1A00FCC98D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6151B2E12645269300FCC98D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6151B31C264552AC00FCC98D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6151B31B264552AC00FCC98D /* SWRevealViewController.m */; };
 		6151B3202645546F00FCC98D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B31F2645546F00FCC98D /* SettingsVC.swift */; };
 		6151B32426455AB700FCC98D /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151B32326455AB700FCC98D /* HelpVC.swift */; };
@@ -74,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6151B31726452C1A00FCC98D /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		611E4A4E264688FA00C5C189 /* SysTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SysTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		611E4A552646A48E00C5C189 /* FiveDaysForecastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastVC.swift; sourceTree = "<group>"; };
+		611E4A582646A4B100C5C189 /* FiveDayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayForecastCell.swift; sourceTree = "<group>"; };
+		61500F2F26466FE300A9AF2A /* MetricImperialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricImperialVC.swift; sourceTree = "<group>"; };
 		6151B29D2645079400FCC98D /* SystemTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6151B2A02645079400FCC98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6151B2A22645079400FCC98D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,26 +86,6 @@
 		6151B2D72645115A00FCC98D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		6151B2DA2645216300FCC98D /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		6151B2DF264525AC00FCC98D /* CityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityVC.swift; sourceTree = "<group>"; };
-		6151B2E12645269300FCC98D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		6151B2E32645269300FCC98D /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		6151B2E42645269300FCC98D /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		6151B2E52645269300FCC98D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		6151B2E62645269300FCC98D /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		6151B2E72645269300FCC98D /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		6151B2E82645269300FCC98D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		6151B2E92645269300FCC98D /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		6151B2EA2645269300FCC98D /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		6151B2EB2645269300FCC98D /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		6151B2EC2645269300FCC98D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		6151B2ED2645269300FCC98D /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		6151B2EE2645269300FCC98D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		6151B2EF2645269300FCC98D /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		6151B2F02645269300FCC98D /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
-		6151B2F12645269300FCC98D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		6151B2F22645269300FCC98D /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
-		6151B2F42645269400FCC98D /* SysTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SysTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		6151B2F52645269400FCC98D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		6151B2F62645269400FCC98D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6151B30A2645271300FCC98D /* NetworkManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerVC.swift; sourceTree = "<group>"; };
 		6151B30C2645273500FCC98D /* CHRestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHRestError.swift; sourceTree = "<group>"; };
 		6151B3102645277F00FCC98D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
@@ -138,8 +104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6151B328264569CB00FCC98D /* WebKit.framework in Frameworks */,
-				6151B2F72645269400FCC98D /* Alamofire.framework in Frameworks */,
-				6151B31626452C1A00FCC98D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +124,179 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		611E4A502646A43B00C5C189 /* 5DaysForeCastVC */ = {
+			isa = PBXGroup;
+			children = (
+				611E4A542646A47500C5C189 /* Controller */,
+				611E4A532646A46D00C5C189 /* ViewModel */,
+				611E4A522646A46500C5C189 /* Model */,
+				611E4A512646A45E00C5C189 /* View */,
+			);
+			path = 5DaysForeCastVC;
+			sourceTree = "<group>";
+		};
+		611E4A512646A45E00C5C189 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				611E4A572646A49800C5C189 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		611E4A522646A46500C5C189 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		611E4A532646A46D00C5C189 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		611E4A542646A47500C5C189 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				611E4A552646A48E00C5C189 /* FiveDaysForecastVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		611E4A572646A49800C5C189 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				611E4A582646A4B100C5C189 /* FiveDayForecastCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		61500F1E26466EE600A9AF2A /* MetricImperialVC */ = {
+			isa = PBXGroup;
+			children = (
+				61500F2226466F4500A9AF2A /* ViewModel */,
+				61500F2126466F4000A9AF2A /* View */,
+				61500F2026466F3B00A9AF2A /* Model */,
+				61500F1F26466F0E00A9AF2A /* Controller */,
+			);
+			path = MetricImperialVC;
+			sourceTree = "<group>";
+		};
+		61500F1F26466F0E00A9AF2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61500F2F26466FE300A9AF2A /* MetricImperialVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61500F2026466F3B00A9AF2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61500F2126466F4000A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2226466F4500A9AF2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61500F2326466F5000A9AF2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61500F2426466F5700A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2526466F5D00A9AF2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61500F2626466F6700A9AF2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61500F2726466F7900A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2826466F8500A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2926466F8C00A9AF2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61500F2A26466F9400A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2B26466F9B00A9AF2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61500F2C26466FA700A9AF2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61500F2D26466FAE00A9AF2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61500F2E26466FB400A9AF2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6151B2942645079400FCC98D = {
 			isa = PBXGroup;
 			children = (
@@ -187,11 +324,9 @@
 				6151B32526455B9E00FCC98D /* ViewControllers */,
 				6151B319264552AC00FCC98D /* SWRevealViewController */,
 				6151B309264526F700FCC98D /* NetWorkManager */,
-				6151B2E22645269300FCC98D /* Alamofire */,
-				6151B2E12645269300FCC98D /* Alamofire.framework */,
-				6151B2F32645269300FCC98D /* MBProgressHUD */,
 				6151B2A02645079400FCC98D /* AppDelegate.swift */,
 				6151B2A22645079400FCC98D /* ViewController.swift */,
+				611E4A4E264688FA00C5C189 /* SysTest-Bridging-Header.h */,
 				6151B2D32645109C00FCC98D /* Constants.swift */,
 				6151B31426452AC500FCC98D /* BaseViewController.swift */,
 				6151B2A42645079400FCC98D /* Main.storyboard */,
@@ -223,6 +358,9 @@
 		6151B2CE26450EC300FCC98D /* MapVC */ = {
 			isa = PBXGroup;
 			children = (
+				61500F2526466F5D00A9AF2A /* ViewModel */,
+				61500F2426466F5700A9AF2A /* View */,
+				61500F2326466F5000A9AF2A /* Model */,
 				6151B2CF26450ECC00FCC98D /* Controller */,
 			);
 			path = MapVC;
@@ -239,6 +377,8 @@
 		6151B2D5264510E000FCC98D /* LocationsVC */ = {
 			isa = PBXGroup;
 			children = (
+				61500F2726466F7900A9AF2A /* View */,
+				61500F2626466F6700A9AF2A /* ViewModel */,
 				6151B2D92645215100FCC98D /* Model */,
 				6151B2D6264510EB00FCC98D /* Cell */,
 			);
@@ -264,6 +404,7 @@
 		6151B2DD2645258A00FCC98D /* CityVC */ = {
 			isa = PBXGroup;
 			children = (
+				61500F2826466F8500A9AF2A /* View */,
 				6151B30F2645276700FCC98D /* ViewModel */,
 				6151B30E2645275E00FCC98D /* Model */,
 				6151B2DE2645259600FCC98D /* Controller */,
@@ -277,39 +418,6 @@
 				6151B2DF264525AC00FCC98D /* CityVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6151B2E22645269300FCC98D /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				6151B2E32645269300FCC98D /* TaskDelegate.swift */,
-				6151B2E42645269300FCC98D /* MultipartFormData.swift */,
-				6151B2E52645269300FCC98D /* NetworkReachabilityManager.swift */,
-				6151B2E62645269300FCC98D /* Timeline.swift */,
-				6151B2E72645269300FCC98D /* DispatchQueue+Alamofire.swift */,
-				6151B2E82645269300FCC98D /* Result.swift */,
-				6151B2E92645269300FCC98D /* ParameterEncoding.swift */,
-				6151B2EA2645269300FCC98D /* AFError.swift */,
-				6151B2EB2645269300FCC98D /* Validation.swift */,
-				6151B2EC2645269300FCC98D /* Response.swift */,
-				6151B2ED2645269300FCC98D /* Alamofire.swift */,
-				6151B2EE2645269300FCC98D /* Request.swift */,
-				6151B2EF2645269300FCC98D /* SessionManager.swift */,
-				6151B2F02645269300FCC98D /* ResponseSerialization.swift */,
-				6151B2F12645269300FCC98D /* ServerTrustPolicy.swift */,
-				6151B2F22645269300FCC98D /* SessionDelegate.swift */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		6151B2F32645269300FCC98D /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				6151B2F42645269400FCC98D /* SysTest-Bridging-Header.h */,
-				6151B2F52645269400FCC98D /* MBProgressHUD.m */,
-				6151B2F62645269400FCC98D /* MBProgressHUD.h */,
-			);
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		6151B309264526F700FCC98D /* NetWorkManager */ = {
@@ -349,6 +457,9 @@
 		6151B31D2645543E00FCC98D /* SettingsVC */ = {
 			isa = PBXGroup;
 			children = (
+				61500F2B26466F9B00A9AF2A /* ViewModel */,
+				61500F2A26466F9400A9AF2A /* View */,
+				61500F2926466F8C00A9AF2A /* Model */,
 				6151B31E2645545500FCC98D /* Controller */,
 			);
 			path = SettingsVC;
@@ -365,6 +476,9 @@
 		6151B32126455A8300FCC98D /* HelpVC */ = {
 			isa = PBXGroup;
 			children = (
+				61500F2E26466FB400A9AF2A /* ViewModel */,
+				61500F2D26466FAE00A9AF2A /* View */,
+				61500F2C26466FA700A9AF2A /* Model */,
 				6151B32226455A9400FCC98D /* Controller */,
 			);
 			path = HelpVC;
@@ -381,6 +495,8 @@
 		6151B32526455B9E00FCC98D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				611E4A502646A43B00C5C189 /* 5DaysForeCastVC */,
+				61500F1E26466EE600A9AF2A /* MetricImperialVC */,
 				6151B2CE26450EC300FCC98D /* MapVC */,
 				6151B2D5264510E000FCC98D /* LocationsVC */,
 				6151B2DD2645258A00FCC98D /* CityVC */,
@@ -530,37 +646,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6151B2FE2645269400FCC98D /* ParameterEncoding.swift in Sources */,
-				6151B2FC2645269400FCC98D /* DispatchQueue+Alamofire.swift in Sources */,
-				6151B2FF2645269400FCC98D /* AFError.swift in Sources */,
-				6151B3012645269400FCC98D /* Response.swift in Sources */,
-				6151B2FD2645269400FCC98D /* Result.swift in Sources */,
-				6151B2FA2645269400FCC98D /* NetworkReachabilityManager.swift in Sources */,
-				6151B3022645269400FCC98D /* Alamofire.swift in Sources */,
-				6151B3082645269400FCC98D /* MBProgressHUD.m in Sources */,
 				6151B3112645277F00FCC98D /* CityModel.swift in Sources */,
 				6151B32426455AB700FCC98D /* HelpVC.swift in Sources */,
 				6151B2A32645079400FCC98D /* ViewController.swift in Sources */,
-				6151B3002645269400FCC98D /* Validation.swift in Sources */,
 				6151B2D82645115A00FCC98D /* LocationCell.swift in Sources */,
 				6151B2D126450EE100FCC98D /* MapVC.swift in Sources */,
-				6151B2F82645269400FCC98D /* TaskDelegate.swift in Sources */,
-				6151B3072645269400FCC98D /* SessionDelegate.swift in Sources */,
-				6151B3032645269400FCC98D /* Request.swift in Sources */,
 				6151B2A12645079400FCC98D /* AppDelegate.swift in Sources */,
+				611E4A562646A48E00C5C189 /* FiveDaysForecastVC.swift in Sources */,
 				6151B31C264552AC00FCC98D /* SWRevealViewController.m in Sources */,
 				6151B3202645546F00FCC98D /* SettingsVC.swift in Sources */,
+				611E4A592646A4B100C5C189 /* FiveDayForecastCell.swift in Sources */,
 				6151B30B2645271300FCC98D /* NetworkManagerVC.swift in Sources */,
 				6151B2E0264525AC00FCC98D /* CityVC.swift in Sources */,
 				6151B3132645278D00FCC98D /* CityVM.swift in Sources */,
-				6151B2F92645269400FCC98D /* MultipartFormData.swift in Sources */,
 				6151B30D2645273600FCC98D /* CHRestError.swift in Sources */,
 				6151B2DB2645216300FCC98D /* LocationModel.swift in Sources */,
-				6151B3062645269400FCC98D /* ServerTrustPolicy.swift in Sources */,
+				61500F3026466FE300A9AF2A /* MetricImperialVC.swift in Sources */,
 				6151B2D42645109C00FCC98D /* Constants.swift in Sources */,
-				6151B3042645269400FCC98D /* SessionManager.swift in Sources */,
-				6151B3052645269400FCC98D /* ResponseSerialization.swift in Sources */,
-				6151B2FB2645269400FCC98D /* Timeline.swift in Sources */,
 				6151B31526452AC600FCC98D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -750,7 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleanharbors.SystemTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SystemTest/MBProgressHUD/SysTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SystemTest/SysTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -774,7 +876,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleanharbors.SystemTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SystemTest/MBProgressHUD/SysTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SystemTest/SysTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
